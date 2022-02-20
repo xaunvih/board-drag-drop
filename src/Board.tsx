@@ -1,27 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { useDebounce } from 'usehooks-ts'
 import { FixedSizeGrid, GridChildComponentProps } from 'react-window'
-import './App.scss'
-
-function createZigZagArrFromN(n: number) {
-    let start = 1
-    const zigZagArr: number[][] = Array(n)
-        .fill(0)
-        .map(() => Array(n).fill(0))
-
-    for (let i = 0; i < n; i++) {
-        for (let j = 0; j < n; j++) {
-            const indexColumn = i % 2 === 0 ? j : n - 1 - j
-            zigZagArr[indexColumn][i] = start++
-        }
-    }
-
-    return zigZagArr
-}
+import './Board.scss'
+import { createZigZagArrFromN } from './utils'
 
 function Board(): React.ReactElement {
-    const [n, updateN] = useState<number>(1000)
+    const [n, updateN] = useState<number>(5)
     const debouncedN = useDebounce<number>(n, 500)
+    const additionalClass = debouncedN > 7 ? 'big' : 'small'
     const [zigZagArr, updateZigZagArr] = useState<number[][]>(createZigZagArrFromN(debouncedN))
 
     function onDragStart(evt: React.DragEvent<HTMLDivElement>, rowIndex: number, columnIndex: number) {
@@ -77,16 +63,12 @@ function Board(): React.ReactElement {
 
     return (
         <div className="container">
-            <input
-                type="number"
-                defaultValue={debouncedN}
-                onChange={onNumberChange}
-                min={1}
-                max={1000}
-                placeholder="Type number of row and column..."
-            />
+            <header className="header">
+                <h2>Type number of row and column:</h2>
+                <input type="number" defaultValue={debouncedN} onChange={onNumberChange} min={1} max={1000} />
+            </header>
 
-            <div className="board">
+            <div className={`board ${additionalClass}`}>
                 <FixedSizeGrid
                     columnCount={debouncedN}
                     rowCount={debouncedN}
@@ -103,5 +85,4 @@ function Board(): React.ReactElement {
     )
 }
 
-export { createZigZagArrFromN }
 export default Board
