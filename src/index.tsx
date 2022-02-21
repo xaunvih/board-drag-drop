@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Board from './Board'
+import Board from './App/Board'
 
 ReactDOM.render(
     <React.StrictMode>

@@ -56,8 +56,8 @@ function Grid(props: GridProps): React.ReactElement {
 
     return (
         <FixedSizeGrid
-            columnCount={zigZagArr[0].length}
-            rowCount={zigZagArr[0].length}
+            columnCount={zigZagArr.length}
+            rowCount={zigZagArr.length}
             columnWidth={100}
             rowHeight={100}
             height={700}
