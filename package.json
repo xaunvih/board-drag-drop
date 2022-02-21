@@ -16,7 +16,7 @@
         "typescript": "^4.4.2",
         "web-vitals": "^2.1.0"
     },
-    "homepage": ".",
+    "homepage": "https://xaunvih.github.io/board-drag-drop/",
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build && mv build docs",
