@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/board-drag-drop/static/css/main.0ef21c36.css",
-    "main.js": "/board-drag-drop/static/js/main.bed36840.js",
-    "index.html": "/board-drag-drop/index.html",
-    "main.0ef21c36.css.map": "/board-drag-drop/static/css/main.0ef21c36.css.map",
-    "main.bed36840.js.map": "/board-drag-drop/static/js/main.bed36840.js.map"
+    "main.css": "https://xaunvih.github.io/board-drag-drop/static/css/main.0ef21c36.css",
+    "main.js": "https://xaunvih.github.io/board-drag-drop/static/js/main.bed36840.js",
+    "index.html": "https://xaunvih.github.io/board-drag-drop/index.html",
+    "main.0ef21c36.css.map": "https://xaunvih.github.io/board-drag-drop/static/css/main.0ef21c36.css.map",
+    "main.bed36840.js.map": "https://xaunvih.github.io/board-drag-drop/static/js/main.bed36840.js.map"
   },
   "entrypoints": [
     "static/css/main.0ef21c36.css",
