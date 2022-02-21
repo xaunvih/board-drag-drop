@@ -1,6 +1,5 @@
 import React from 'react'
 import { FixedSizeGrid, GridChildComponentProps } from 'react-window'
-import './Board.scss'
 
 interface GridProps {
     zigZagArr: number[][]
